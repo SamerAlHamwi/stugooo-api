@@ -1,0 +1,123 @@
+{
+
+
+    "Home": "الرئيسية",
+    "Our Products":"منتجاتنا",
+    "Vision":"رؤيتنــا",
+    "Blog":"المدونة",
+    "Customer Reviews":"قالو عنا",
+    "Videos":"الفيديوهات",
+    "Contact Us":"تواصل معنا ",
+    "Become a Partner":"كن شريكا معنا",
+    "Read more":"اقرأ المزيد...",
+  "Choose Language":"اخنر اللغة", 
+  "Be a partner":"كن شريكاً", 
+  "Download Android": "تحميل أندرويد",
+  "Download Ios": "تحميل أيفون",
+
+  "Android Url": "رابط أندرويد",
+  "Ios Url": "رابط أيفون",
+
+
+"Sign Up":"تسجيل",
+"Our team":"فريقنا",
+
+
+
+
+    "User Name": "اسم المستخدم",
+
+    
+    "post": "مدونة",
+    "posts": "مدونات",
+    "publish/on/off": "نشر/الغاء",
+    "blog title": "عنوان المدونة",
+    "publish": "نشر",
+    "unpublish": "عدم نشر",
+    "summary": "الملخص",
+    "content": "المحتوى",
+    "thumb image" : "الصورة المصغرة",
+    "main image": "الصورة",
+    "card image": "الصورة المصغرة",
+    "tags": "التاغات",
+    "status": "الحالة",
+    "Published On": "نشر في",
+
+
+    "Products": "منتجات",
+    "Product": "منتج",
+    "Product Name": "اسم المنتج",
+    "Product Content": "وصف المنتج",
+    "Product Image": "صورة المنتج",
+    "Tags": "التاغات",
+    "Product Status": "نشر",
+
+    
+    "Settings": " الصفحة الرئيسية",
+    "main section": "الصفحة الرئيسية",
+    "main title": "عنوان الصفحة الرئيسية",
+    "main content": "نص الصفحة الرئيسية",
+    "company vision": "قسم الرؤيا",
+    "vision 1": "الرؤيا 1",
+    "vision 2": "الرؤيا 2",
+    "vision 3": "الرؤيا 3",
+    "vision 4": "الرؤيا 4",
+    "vision 5": "الرؤيا 5",
+    "vision 6": "الرؤيا 6",
+    "cards counts": "الأعداد المعروضة في الصفحة الرئيسية",
+    "products count": "عدد المنتجات  ",
+    "posts count": "عدد المدونات  ",
+    "customers count": "عدد الآراء  ",
+    "videos count": "عدد الفيديوهات  ",
+
+    "contacts section": "قسم التواصل",
+    "facebook url": "facebook",
+    "whatsapp url": "whatsapp",
+    "telegram url": "telegram",
+    "company address": "العنوان",
+    "company email": "البريد الالكتروني",
+    "company phone": "رقم الهاتف",
+    "company mobile": "رقم الجوال",
+    "office hours": "ساعات العمل",
+    "footer": "Footer",
+    "Saved successfully": "تم الحفظ بنجاح",
+
+    "Video": "فيديو",
+    "video title": "عنوان الفيديو",
+    "video url": "رابط الفيديو",
+    "video thumb": "الصورة المصغرة",
+    "view": "عرض",
+
+    "Company review": "أراء العملاء",
+    "Company reviews": "أراء العملاء",
+    "company review": " الرأي",
+    "company name": "أسم الشركة",
+    "company logo": "شعار الشركة",
+
+
+    
+
+    "Details": "التفاصيل",
+    "Name": "الاسم",
+    "Image": "الصورة",
+    "Email": "البريد الالكتروني",
+    "Send":"ارسال",
+    "Message":"الرسالة",
+
+
+
+    "": "",
+
+    
+   
+    
+
+
+
+
+    "fooo": "فاضي"
+
+
+
+    
+}

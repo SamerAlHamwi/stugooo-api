@@ -1,0 +1,102 @@
+{
+    "Home": "Ana Sayfa",
+    "Our Products": "Ürünlerimiz",
+    "Vision": "Vizyonumuz",
+    "Blog": "Blog",
+    "Customer Reviews": "Müşteri Yorumları",
+    "Videos": "Videolar",
+    "Contact Us": "Bize Ulaşın",
+    "Become a Partner": "İş Ortağı Olun",
+    "Read more": "Daha Fazla Oku...",
+  "Choose Language":"Dil Seçin",
+  "Be a partner":"Ortak ol", 
+"Download Android": "Android'u indir",
+"Download Ios": "iOS'u indir",
+
+  "Android Url": "رابط أندرويد",
+  "Ios Url": "رابط أيفون",
+  
+"Sign Up":"Kayıt Ol",
+"Our team":"Ekibimiz",
+
+
+
+    "User Name": "Kullanıcı Adı",
+
+    "post": "Yazı",
+    "posts": "Yazılar",
+    "publish/on/off": "Yayınla/Kapat",
+    "blog title": "Blog Başlığı",
+    "publish": "Yayınla",
+    "unpublish": "Yayından Kaldır",
+    "summary": "Özet",
+    "content": "İçerik",
+    "thumb image": "Küçük Resim",
+    "main image": "Ana Resim",
+    "card image": "Kart Resmi",
+    "tags": "Etiketler",
+    "status": "Durum",
+    "Published On": "Yayınlanma Tarihi",
+
+    "Products": "Ürünler",
+    "Product": "Ürün",
+    "Product Name": "Ürün Adı",
+    "Product Content": "Ürün Açıklaması",
+    "Product Image": "Ürün Resmi",
+    "Tags": "Etiketler",
+    "Product Status": "Ürün Durumu",
+
+    "Settings": "Ayarlar",
+    "main section": "Ana Bölüm",
+    "main title": "Ana Başlık",
+    "main content": "Ana İçerik",
+    "company vision": "Şirket Vizyonu Bölümü",
+    "vision 1": "Vizyon 1",
+    "vision 2": "Vizyon 2",
+    "vision 3": "Vizyon 3",
+    "vision 4": "Vizyon 4",
+    "vision 5": "Vizyon 5",
+    "vision 6": "Vizyon 6",
+    "cards counts": "Ana Sayfadaki Kart Sayıları",
+    "products count": "Ürün Sayısı",
+    "posts count": "Blog Yazısı Sayısı",
+    "customers count": "Müşteri Yorumu Sayısı",
+    "videos count": "Video Sayısı",
+
+    "contacts section": "İletişim Bölümü",
+    "facebook url": "Facebook URL",
+    "whatsapp url": "Whatsapp URL",
+    "telegram url": "Telegram URL",
+    "company address": "Şirket Adresi",
+    "company email": "Şirket E-postası",
+    "company phone": "Şirket Telefonu",
+    "company mobile": "Şirket Cep Telefonu",
+    "office hours": "Çalışma Saatleri",
+    "footer": "Alt Bilgi",
+    "Saved successfully": "Başarıyla Kaydedildi",
+
+    "Video": "Video",
+    "video title": "Video Başlığı",
+    "video url": "Video URL'si",
+    "video thumb": "Video Küçük Resmi",
+    "view": "Görüntüle",
+
+    "Company review": "Şirket Yorumu",
+    "Company reviews": "Şirket Yorumları",
+    "company review": "Yorum",
+    "company name": "Şirket Adı",
+    "company logo": "Şirket Logosu",
+
+    
+    "Details": "Detaylar",
+    "Name": "İsim",
+    "Image": "Resim",
+
+    "Email": "E-posta",
+    "Send": "Gönder",
+    "Message": "Mesaj",
+
+    "": "",
+
+    "fooo": "Boş"
+}
