@@ -40,5 +40,8 @@ RUN chown -R www-data:www-data \
     storage \
     bootstrap/cache
 
-CMD ["php-fpm"]
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
 
