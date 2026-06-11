@@ -51,7 +51,20 @@ Route::get('/embed/{videoId}', function($videoId) {
 
 
 Route::get('/', function () {
-    return view('welcome');
+    $settings = Setting::first();
+    $products = Product::where('published', true)->take($settings->products_count)->get();
+    $posts = Post::where('published', true)->take($settings->posts_count)->get();
+    $said = CustomerSaying::where('published', true)->take($settings->customers_count)->get();
+    $videos = Video::where('published', true)->take($settings->videos_count)->get();
+    $data = json_decode(json_encode([
+        'settings' => $settings,
+        'products' => $products,
+        'posts'    => $posts,
+        'said'     => $said,
+        'videos'   => $videos,
+    ]));
+
+    return view('welcome')->with(['data' => $data]);
 })->name('home');
 
 Route::get("post/{id}", [Controller::class,'getPost'])->name('post');
