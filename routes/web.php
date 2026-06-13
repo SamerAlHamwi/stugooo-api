@@ -36,8 +36,8 @@ Route::get('auth/zoho/initilization', [ZohoController::class, 'initilizationView
 Route::get('/oauth/google/authorize', [GoogleMeetController::class, 'login']);
 Route::get('/auth/google/redirect', [GoogleMeetController::class, 'handleRedirect']);
 Route::get('/auth/google/google-status', [GoogleMeetController::class, 'handleGoogleStatus']);
-Route::post('auth/google/createMeeting', [GoogleMeetController::class, 'createMeeting']);
-Route::delete('auth/google/deleteMeeting', [GoogleMeetController::class, 'deleteMeeting']);
+Route::get('auth/google/createMeeting', [GoogleMeetController::class, 'createMeeting']);
+Route::get('auth/google/deleteMeeting', [GoogleMeetController::class, 'deleteMeeting']);
 
 Route::get('/oauth/zoom/authorize', [ZoomMeetingController::class, 'login']);
 Route::get('/auth/zoom/redirect', [ZoomMeetingController::class, 'handleRedirect']);

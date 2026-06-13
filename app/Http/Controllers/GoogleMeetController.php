@@ -238,6 +238,8 @@ class GoogleMeetController extends Controller
 
                     'userId' => $userId,
 
+                    'isStageMethod' => $isStageMethod,
+
                     'accessToken' => $data['access_token'] ?? null,
 
                     'refreshToken' => $data['refresh_token'] ?? null,
@@ -408,6 +410,8 @@ class GoogleMeetController extends Controller
 
                         'userId' => $userId,
 
+                        'isStageMethod' => $isStageMethod,
+
                         'accessToken' => $accessToken,
 
                         'expiresIn' => $refresh['data']['expires_in'] ?? 3600,
@@ -487,11 +491,15 @@ class GoogleMeetController extends Controller
 
             $data = $response->json();
 
+            $meetLink = $data['hangoutLink']
+                ?? $data['conferenceData']['entryPoints'][0]['uri']
+                ?? null;
+
             return response()->json([
 
                 "success" => true,
 
-                "meetLink" => $data['hangoutLink'] ?? null,
+                "meetLink" => $meetLink,
 
                 "eventId" => $data['id'] ?? null,
 
@@ -541,12 +549,53 @@ class GoogleMeetController extends Controller
 
             $accessToken = $userData['googleCalendarAccessToken'] ?? null;
 
+            $refreshToken = $userData['googleCalendarRefreshToken'] ?? null;
+
             if (empty($accessToken)) {
 
                 return response()->json([
                     "success" => false,
                     "message" => "No Google access token."
                 ]);
+            }
+
+            // =========================================================
+            // REFRESH TOKEN IF EXPIRED
+            // =========================================================
+
+            if ($this->checkTokenAge($userData)) {
+
+                if (empty($refreshToken)) {
+
+                    return response()->json([
+                        "success" => false,
+                        "message" => "Refresh token missing. Please login again."
+                    ]);
+                }
+
+                $refresh = $this->refreshToken($refreshToken);
+
+                if (!$refresh['success']) {
+
+                    return response()->json([
+                        "success" => false,
+                        "message" => $refresh['message'],
+                        "data" => $refresh['data'] ?? null
+                    ]);
+                }
+
+                $accessToken = $refresh['data']['access_token'];
+
+                Http::post(
+                    'https://updateGoogleMeetTokens-ysuk6o3iia-uc.a.run.app/',
+                    [
+                        'userId' => $userId,
+                        'isStageMethod' => $isStageMethod,
+                        'accessToken' => $accessToken,
+                        'expiresIn' => $refresh['data']['expires_in'] ?? 3600,
+                        'requestUpdate' => 'update',
+                    ]
+                );
             }
 
             $response = Http::withToken($accessToken)
