@@ -38,6 +38,7 @@ Route::get('/auth/google/redirect', [GoogleMeetController::class, 'handleRedirec
 Route::get('/auth/google/google-status', [GoogleMeetController::class, 'handleGoogleStatus']);
 Route::get('auth/google/createMeeting', [GoogleMeetController::class, 'createMeeting']);
 Route::get('auth/google/deleteMeeting', [GoogleMeetController::class, 'deleteMeeting']);
+Route::get('auth/google/revoke-token', [GoogleMeetController::class, 'revokeToken']);
 
 Route::get('/oauth/zoom/authorize', [ZoomMeetingController::class, 'login']);
 Route::get('/auth/zoom/redirect', [ZoomMeetingController::class, 'handleRedirect']);

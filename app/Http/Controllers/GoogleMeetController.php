@@ -349,11 +349,6 @@ class GoogleMeetController extends Controller
 
             $userData = $this->getUserId($userId, $isStageMethod);
 
-            Log::info('GOOGLE CREATE MEETING USER DATA', [
-                'userData_keys' => $userData ? array_keys($userData) : null,
-                'userData' => $userData,
-            ]);
-
             if (empty($userData)) {
 
                 return response()->json([
@@ -615,6 +610,72 @@ class GoogleMeetController extends Controller
                     "message" => $response->body()
                 ]);
             }
+
+            return response()->json([
+                "success" => true
+            ]);
+
+        } catch (\Exception $e) {
+
+            return response()->json([
+                "success" => false,
+                "message" => $e->getMessage()
+            ]);
+        }
+    }
+
+    // =========================================================
+    // REVOKE TOKEN
+    // =========================================================
+    public function revokeToken(Request $request)
+    {
+        try {
+
+            $userId = $request->query('userId');
+
+            $isStageMethod = ($request->query('isStageMethod') ?? 'yes');
+
+            if (empty($userId)) {
+
+                return response()->json([
+                    "success" => false,
+                    "message" => "User ID required."
+                ]);
+            }
+
+            $userData = $this->getUserId($userId, $isStageMethod);
+
+            if (empty($userData)) {
+
+                return response()->json([
+                    "success" => false,
+                    "message" => "User not found."
+                ]);
+            }
+
+            $token = $userData['googleCalendarAccessToken'] ?? null;
+
+            if (empty($token)) {
+
+                return response()->json([
+                    "success" => false,
+                    "message" => "No Google access token to revoke."
+                ]);
+            }
+
+            $response = Http::asForm()->post(
+                'https://oauth2.googleapis.com/revoke',
+                ['token' => $token]
+            );
+
+            Http::post(
+                'https://updateGoogleMeetTokens-ysuk6o3iia-uc.a.run.app/',
+                [
+                    'userId' => $userId,
+                    'isStageMethod' => $isStageMethod,
+                    'requestUpdate' => 'delete',
+                ]
+            );
 
             return response()->json([
                 "success" => true
