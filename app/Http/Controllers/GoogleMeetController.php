@@ -349,6 +349,11 @@ class GoogleMeetController extends Controller
 
             $userData = $this->getUserId($userId, $isStageMethod);
 
+            Log::info('GOOGLE CREATE MEETING USER DATA', [
+                'userData_keys' => $userData ? array_keys($userData) : null,
+                'userData' => $userData,
+            ]);
+
             if (empty($userData)) {
 
                 return response()->json([
